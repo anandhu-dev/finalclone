@@ -18,7 +18,13 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hey {}, ente peru {}! Tap /help to start. 💁 Njangalude [Status Page](https://www.facebook.com/malayalamstatusvideos.page/) inte grpup manage cheyyunnathanu ente joli. 🥰😍
+Hey {}, ente peru {}!
+
+**kozhitharam kaanikaan kerivannathanel kandamvazhi vitto. 😋 njan oru pennalla robot aanu 👾**
+ 
+Tap /help to start. 💁 
+
+Njangalude [Status Page](https://www.facebook.com/malayalamstatusvideos.page/) inte grpup manage cheyyunnathanu ente joli. 🥰😍
 
 Ente Owner [Kannan](tg://user?id={}) aanu.
 For more details tap /info.. 
