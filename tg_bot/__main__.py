@@ -20,7 +20,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hey {}, ente peru {}!
 
-**kozhitharam kaanikaan kerivannathanel kandamvazhi vitto.** 😋 **njan oru pennalla robot aanu** 👾
+**kozhitharam kaanikaan kerivannathanel kandamvazhi vitto.** 😋 **njan oru pennalla bot aanu** 👾
  
 Tap /help to start. 💁 
 
@@ -32,9 +32,7 @@ For more details tap /info..
 """
 
 HELP_STRINGS = """
-നമസ്കാരം ! എന്റെ പേര് *{}*.
-
-ഞാൻ ടെലെഗ്രാമിലെ Group Management Bot ആണ്... എന്നെ പ്രവർത്തിപ്പിക്കേണ്ട വിധം ആണ് താഴെ കൊടുത്തിട്ടുള്ളത്....
+Hey 🙋. I am a telegram bot recreated by kannappan 🥰😍
 
 *Main* ലഭ്യമായ commandകൾ:
  - /start: Botനെ Start ചെയ്യാൻ...
