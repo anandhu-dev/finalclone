@@ -18,14 +18,10 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hey {}, ente peru {}! Tap /help to start. 💁 
-Njangalude [Status Page](t.me/MarieChechi) inte grpup manage cheyyunnathanu ente joli.
+Hey {}, ente peru {}! Tap /help to start. 💁 Njangalude [Status Page](https://www.facebook.com/malayalamstatusvideos.page/) inte grpup manage cheyyunnathanu ente joli. 🥰😍
 
 Ente Owner [Kannan](tg://user?id={}) aanu.
 For more details tap /info.. 
-
-Using standard [Marie](http://telegram.dog/BanhammerMarie_bot) is always gonna be easier.
-എന്റെ ചേച്ചിയായ [Marie](http://telegram.dog/BanhammerMarie_bot) ഉപയോഗിക്കുന്നത് എല്ലായ്പ്പോഴും എളുപ്പമായിരിക്കും. മേരി ചേച്ചിക്ക് English മാത്രമേ അറിയൂ..
 
 """
 
