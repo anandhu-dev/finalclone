@@ -20,7 +20,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hey {}, ente peru {}!
 
-**kozhitharam kaanikaan kerivannathanel kandamvazhi vitto. 😋 njan oru pennalla robot aanu 👾**
+**kozhitharam kaanikaan kerivannathanel kandamvazhi vitto.** 😋 **njan oru pennalla robot aanu** 👾
  
 Tap /help to start. 💁 
 
