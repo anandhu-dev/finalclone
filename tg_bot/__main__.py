@@ -21,7 +21,7 @@ PM_START_TEXT = """
 Hey {}, ente peru {}! Tap /help to start. 💁 
 Njangalude [Status Page](t.me/MarieChechi) inte grpup manage cheyyunnathanu ente joli.
 
-Ente Owner [ivan](tg://user?id={}) aanu.
+Ente Owner [Kannan](tg://user?id={}) aanu.
 For more details tap /info.. 
 
 Using standard [Marie](http://telegram.dog/BanhammerMarie_bot) is always gonna be easier.
