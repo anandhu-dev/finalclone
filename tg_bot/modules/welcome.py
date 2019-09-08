@@ -452,17 +452,17 @@ __help__ = """
 {}
 
 *Admin only:*
- - /welcome <on/off>:  Welcome സന്ദേശങ്ങൾ പ്രാപ്തമാക്കുക / അപ്രാപ്തമാക്കുക.
- - /welcome: നിലവിലെ Welcome ക്രമീകരണങ്ങൾ കാണിക്കുന്നു.
- - /welcome noformat: ഫോർമാറ്റിംഗ് ഇല്ലാതെ നിലവിലെ Welcome ക്രമീകരണങ്ങൾ കാണിക്കുന്നു - നിങ്ങളുടെ സ്വാഗത സന്ദേശങ്ങൾ Recycle ചെയ്യാൻ ഉപയോഗപ്രദമാണ്!!
- - /goodbye -> അതേ ഉപയോഗം കൂടാതെ / സ്വാഗതം.
- - /setwelcome <sometext>: ഒരു ഇച്ഛാനുസൃത സ്വാഗത സന്ദേശം സജ്ജമാക്കുക. മീഡിയയ്ക്ക് മറുപടി നൽകുന്നത് ഉപയോഗിക്കുകയാണെങ്കിൽ, ആ മീഡിയ ഉപയോഗിക്കുന്നു.
- - /setgoodbye <sometext>:  ഒരു ഇച്ഛാനുസൃത വിട സന്ദേശം സജ്ജമാക്കുക. മീഡിയയ്ക്ക് മറുപടി നൽകുന്നത് ഉപയോഗിക്കുകയാണെങ്കിൽ, ആ മീഡിയ ഉപയോഗിക്കുന്നു...
- - /resetwelcome: Default ആയിട്ടുള്ള സ്വാഗത സന്ദേശത്തിലേക്ക് തിരിച്ചു പോവുക...
- - /resetgoodbye: Default ആയിട്ടുള്ള Good Bye സന്ദേശത്തിലേക്ക് തിരിച്ചു പോവുക
- - /cleanwelcome <on/off>: On പുതിയ അംഗത്തിൽ, ചാറ്റ് സ്പാം ചെയ്യുന്നത് ഒഴിവാക്കാൻ മുമ്പത്തെ സ്വാഗത സന്ദേശം ഇല്ലാതാക്കാൻ ശ്രമിക്കുക.
+ - /welcome <on/off>: enable/disable welcome messages.
+ - /welcome: shows current welcome settings.
+ - /welcome noformat: shows current welcome settings, without the formatting - useful to recycle your welcome messages!
+ - /goodbye -> same usage and args as /welcome.
+ - /setwelcome <sometext>: set a custom welcome message. If used replying to media, uses that media.
+ - /setgoodbye <sometext>: set a custom goodbye message. If used replying to media, uses that media.
+ - /resetwelcome: reset to the default welcome message.
+ - /resetgoodbye: reset to the default goodbye message.
+ - /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.
 
- - /welcomehelp: ഇഷ്‌ടാനുസൃത സ്വാഗത / വിട സന്ദേശങ്ങൾക്കായി കൂടുതൽ ഫോർമാറ്റിംഗ് വിവരങ്ങൾ കാണുക.
+ - /welcomehelp: view more formatting information for custom welcome/goodbye messages.
 """.format(WELC_HELP_TXT)
 
 __mod_name__ = "Welcomes/Goodbyes"
