@@ -21,13 +21,13 @@ from tg_bot.modules.log_channel import loggable
 from tg_bot.modules.sql import warns_sql as sql
 
 WARN_HANDLER_GROUP = 9
-CURRENT_WARNING_FILTER_STRING = "<b>ഈ ചാറ്റിലെ നിലവിലെ warning filters:</b>\n"
+CURRENT_WARNING_FILTER_STRING = "<b>Ee groupile ippol ulla warlist:</b>\n"
 
 
 # Not async
 def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-        # message.reply_text("അഡ്മിൻ ആണ്... warn ചെയ്യാൻ പറ്റില്ല!")
+        # message.reply_text("Admin alle.? Adminsine enthina warn cheyunnath 🤔 sorry enthaayalum njan adminsine warn cheyyila. 😒")
         return ""
 
     if warner:
@@ -41,11 +41,11 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
         sql.reset_warns(user.id, chat.id)
         if soft_warn:  # kick
             chat.unban_member(user.id)
-            reply = "{} warnings, {} നെ എടുത്തു വെളിയിൽ കളഞ്ഞു!".format(limit, mention_html(user.id, user.first_name))
+            reply = "{} warnings, {} ne njan chavitty purathakki iny aare engilum kalayano..? begam para ithekke enik bayangara ishttam ulla kaaryava.. 😁 😂 🤣".format(limit, mention_html(user.id, user.first_name))
 
         else:  # ban
             chat.kick_member(user.id)
-            reply = "{} warnings, {} ന് ബണ്ണ് കൊടുത്തു വിട്ടിട്ടുണ്ട്!".format(limit, mention_html(user.id, user.first_name))
+            reply = "Pwolichu 🤭 {} warnings, {} nu ee groupil iny join cheyyanamenkil njan vichaarikanam 🤪😈".format(limit, mention_html(user.id, user.first_name))
 
         for warn_reason in reasons:
             reply += "\n - {}".format(html.escape(warn_reason))
