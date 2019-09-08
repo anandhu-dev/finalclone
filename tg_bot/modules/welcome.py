@@ -398,26 +398,29 @@ def clean_welcome(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
 
-WELC_HELP_TXT = "നിങ്ങളുടെ ഗ്രൂപ്പിന്റെ സ്വാഗത / വിട സന്ദേശങ്ങൾ‌ ഒന്നിലധികം രീതികളിൽ‌ വ്യക്തിഗതമാക്കാൻ‌ കഴിയും."\
-                " സ്ഥിരസ്ഥിതി സ്വാഗത സന്ദേശം പോലെ സന്ദേശങ്ങൾ വ്യക്തിഗതമായി സൃഷ്ടിക്കണമെങ്കിൽ, നിങ്ങൾക്ക് ഈ *വേരിയബിളുകൾ* ഉപയോഗിക്കാം:"\
-                " - `{{first}}`:  ഇത് ഉപയോക്താവിന്റെ ആദ്യ നാമത്തെ പ്രതിനിധീകരിക്കുന്നു\n" \
-                " - `{{last}}`:  ഇത് ഉപയോക്താവിന്റെ അവസാന പേരിനെ പ്രതിനിധീകരിക്കുന്നു.\n" \
-                " - `{{fullname}}`: ഇത് ഉപയോക്താവിന്റെ പൂർണ്ണ നാമത്തെ പ്രതിനിധീകരിക്കുന്നു.\n" \
-                " - `{{username}}`:  ഇത് ഉപയോക്താവിന്റെ Username പ്രതിനിധീകരിക്കുന്നു.\n" \
+WELC_HELP_TXT = "Your group's welcome/goodbye messages can be personalised in multiple ways. If you want the messages" \
+                " to be individually generated, like the default welcome message is, you can use *these* variables:\n" \
+                " - `{{first}}`: this represents the user's *first* name\n" \
+                " - `{{last}}`: this represents the user's *last* name. Defaults to *first name* if user has no " \
+                "last name.\n" \
+                " - `{{fullname}}`: this represents the user's *full* name. Defaults to *first name* if user has no " \
+                "last name.\n" \
+                " - `{{username}}`: this represents the user's *username*. Defaults to a *mention* of the user's " \
+                "first name if has no username.\n" \
                 " - `{{mention}}`: this simply *mentions* a user - tagging them with their first name.\n" \
-                " - `{{id}}`: ഇത് ഉപയോക്താവിന്റെ ഐഡിയെ പ്രതിനിധീകരിക്കുന്നു\n" \
-                " - `{{count}}`: ഇത് ഉപയോക്താവിന്റെ അംഗ നമ്പറിനെ പ്രതിനിധീകരിക്കുന്നു..\n" \
-                " - `{{chatname}}`:  ഇത് നിലവിലെ ചാറ്റ് നാമത്തെ പ്രതിനിധീകരിക്കുന്നു..\n" \
-                "\nഓരോ വേരിയബിളും മാറ്റിസ്ഥാപിക്കുന്നതിന് `{{}}` to be replaced.\n" \
-                "സ്വാഗത സന്ദേശങ്ങളും markdown ണിനെ പിന്തുണയ്ക്കുന്നു, അതിനാൽ നിങ്ങൾക്ക് ഏത് ഘടകങ്ങളും ബോൾഡ് / ഇറ്റാലിക് / കോഡ് / ലിങ്കുകൾ ആക്കാം. " \
-                "ബട്ടണുകളും പിന്തുണയ്‌ക്കുന്നു, അതിനാൽ ചില നല്ല ആമുഖ ബട്ടണുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ സ്വാഗതം ആകർഷകമാക്കും.\n" \
-                "നിങ്ങളുടെ നിയമങ്ങളുമായി ലിങ്കുചെയ്യുന്ന ഒരു ബട്ടൺ സൃഷ്ടിക്കുന്നതിന്, ഇത് ഉപയോഗിക്കുക: `[Rules](buttonurl://t.me/{}?start=group_id)`. " \
+                " - `{{id}}`: this represents the user's *id*\n" \
+                " - `{{count}}`: this represents the user's *member number*.\n" \
+                " - `{{chatname}}`: this represents the *current chat name*.\n" \
+                "\nEach variable MUST be surrounded by `{{}}` to be replaced.\n" \
+                "Welcome messages also support markdown, so you can make any elements bold/italic/code/links. " \
+                "Buttons are also supported, so you can make your welcomes look awesome with some nice intro " \
+                "buttons.\n" \
+                "To create a button linking to your rules, use this: `[Rules](buttonurl://t.me/{}?start=group_id)`. " \
                 "Simply replace `group_id` with your group's id, which can be obtained via /id, and you're good to " \
                 "go. Note that group ids are usually preceded by a `-` sign; this is required, so please don't " \
                 "remove it.\n" \
                 "If you're feeling fun, you can even set images/gifs/videos/voice messages as the welcome message by " \
                 "replying to the desired media, and calling /setwelcome.".format(dispatcher.bot.username)
-
 
 @run_async
 @user_admin
