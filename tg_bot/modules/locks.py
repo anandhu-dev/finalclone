@@ -106,7 +106,7 @@ def lock(bot: Bot, update: Update, args: List[str]) -> str:
         if len(args) >= 1:
             if args[0] in LOCK_TYPES:
                 sql.update_lock(chat.id, args[0], locked=True)
-                message.reply_text("ഞാൻ {} ലോക്ക് ചെയ്തു. അഡ്മിൻ അല്ലാത്തവർക്ക് ഇനി അയക്കുവാൻ സാധിക്കില്ല.!".format(args[0]))
+                message.reply_text("Locked 😎 Iny admin allatha oraaleyum njan {} ayakkan anuvathikilla. 😈".format(args[0]))
 
                 return "<b>{}:</b>" \
                        "\n#LOCK" \
@@ -120,7 +120,7 @@ def lock(bot: Bot, update: Update, args: List[str]) -> str:
                     members = users_sql.get_chat_members(str(chat.id))
                     restr_members(bot, chat.id, members, messages=True, media=True, other=True)
 
-                message.reply_text("ഞാൻ {} ലോക്ക് ചെയ്തു. അഡ്മിൻ അല്ലാത്തവർക്ക് ഇനി അയക്കുവാൻ സാധിക്കില്ല.!".format(args[0]))
+                message.reply_text("Locked 😎 Iny admin allatha oraaleyum njan {} ayakkan anuvathikilla. 😈 ".format(args[0]))
                 return "<b>{}:</b>" \
                        "\n#LOCK" \
                        "\n<b>Admin:</b> {}" \
@@ -128,10 +128,10 @@ def lock(bot: Bot, update: Update, args: List[str]) -> str:
                                                           mention_html(user.id, user.first_name), args[0])
 
             else:
-                message.reply_text("നിങ്ങൾ എന്താണ് ലോക്ക് ചെയ്യാൻ ശ്രമിക്കുന്നത് ...? /locktypes ലോക്ക് ടൈപ്പ് നോക്കിയിട്ട് അയക്കു..")
+                message.reply_text("Enthaada lock cheyyendath..? link sharing venel ozhivaakkaam. veno..? 🤔  urls lock cheyyan /lock url ennu type chey. allenkil /locltypes nokkittu para ithil ullathekke enik lock cheyyan pattum. 😎")
 
     else:
-        message.reply_text("ഞാൻ ഒരു അഡ്മിനിസ്ട്രേറ്റർ അല്ല, അല്ലെങ്കിൽ എനിക്ക് ലോക്ക് ചെയ്യാൻ ഉള്ള പരിമിതികൾ തന്നിട്ടില്ല.")
+        message.reply_text("da njan admin allello aadyam ene admin aakku ennaale enik ithekke manage cheyyan pattu.. 😟")
 
     return ""
 
@@ -207,7 +207,7 @@ def del_lockables(bot: Bot, update: Update):
                             return
 
                         chat.kick_member(new_mem.id)
-                        message.reply_text("Only admins are allowed to add bots to this chat! Get outta here.")
+                        message.reply_text("da chekka ivide njan und.😡 ene pole oru kidilan bot vere undo..? 😌. nee konduvanna ee botinem kondu vanna vazhiye pokkonam. 😠 allenkil nine cherth ividunnu chavitty porathakkum kettodaa pattii.. 🤬 ")
             else:
                 try:
                     message.delete()
@@ -241,7 +241,7 @@ def build_lock_message(chat_id):
     locks = sql.get_locks(chat_id)
     restr = sql.get_restr(chat_id)
     if not (locks or restr):
-        res = "ഈ ചാറ്റിൽ നിലവിൽ ലോക്കുകളൊന്നുമില്ല.."
+        res = "njan ee groupil ithuvare onnum lock cheythittilla 😏"
     else:
         res = "These are the locks in this chat:"
         if locks:
