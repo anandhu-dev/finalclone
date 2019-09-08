@@ -228,15 +228,15 @@ def welcome(bot: Bot, update: Update, args: List[str]):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_welc_preference(str(chat.id), True)
-            update.effective_message.reply_text("I'll be polite!")
+            update.effective_message.reply_text("Sheri aaykotte 😉")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_welc_preference(str(chat.id), False)
-            update.effective_message.reply_text("I'm sulking, not saying hello anymore.")
+            update.effective_message.reply_text("Ho.. Ennathaano njan iny aarodum Oraksharam polum mindunnilla pore. 😔")
 
         else:
             # idek what you're writing, say yes or no
-            update.effective_message.reply_text("I understand 'on/yes' or 'off/no' only!")
+            update.effective_message.reply_text("Da onnenkil 'on/yes' para, allenkil 'off/no' para. 🤨 enthaa ninte vilivellaam poyo.? 😄")
 
 
 @run_async
@@ -274,15 +274,15 @@ def goodbye(bot: Bot, update: Update, args: List[str]):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_gdbye_preference(str(chat.id), True)
-            update.effective_message.reply_text("I'll be sorry when people leave!")
+            update.effective_message.reply_text("ok, Aarenkilum leave Cheyuvaanel Njan sorry paranjekkaam. 😥")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_gdbye_preference(str(chat.id), False)
-            update.effective_message.reply_text("They leave, they're dead to me.")
+            update.effective_message.reply_text("Ok da muthe. Athre ullu Pogunnavar Potte. Aaru poyaalum Nammukku Pullaah. 😁😎")
 
         else:
             # idek what you're writing, say yes or no
-            update.effective_message.reply_text("I understand 'on/yes' or 'off/no' only!")
+            update.effective_message.reply_text("Da onnenkil 'on/yes' para, allenkil 'off/no' para. 🤨 enthaa ninte vilivellaam poyo.? 😄")
 
 
 @run_async
@@ -296,11 +296,11 @@ def set_welcome(bot: Bot, update: Update) -> str:
     text, data_type, content, buttons = get_welcome_type(msg)
 
     if data_type is None:
-        msg.reply_text("You didn't specify what to reply with!")
+        msg.reply_text("Manasilayilleda mone onnude para. 🤔")
         return ""
 
     sql.set_custom_welcome(chat.id, content or text, data_type, buttons)
-    msg.reply_text("Welcome message സെറ്റ് ചെയ്‌തിട്ടുണ്ട്‌! 🤩")
+    msg.reply_text("ok da. iny aarelum kerivarumbol njan ithu paranjolaam. 😋")
 
     return "<b>{}:</b>" \
            "\n#SET_WELCOME" \
