@@ -26,7 +26,7 @@ Tap /help to start. 💁
 
 Njangalude [Status Page](https://www.facebook.com/malayalamstatusvideos.page/) inte grpup manage Cheyyan vendi nirmicha oru pwly Bot aanu njan 😌😌. 
 
-*Ente Moyalali* [EE themaadi](tg://user?={}) *aanu*
+*Ente Moyalali* [EE themaadi](tg://user?id={}) *aanu*
 
 For more details tap /info.. 
 
