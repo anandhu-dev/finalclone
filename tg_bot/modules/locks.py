@@ -147,7 +147,7 @@ def unlock(bot: Bot, update: Update, args: List[str]) -> str:
         if len(args) >= 1:
             if args[0] in LOCK_TYPES:
                 sql.update_lock(chat.id, args[0], locked=False)
-                message.reply_text("ഞാൻ {} അൺലോക്ക് ചെയ്തിട്ടുണ്ട്. ഇനി എല്ലാവർക്കും ഇവിടെ അയക്കാം..".format(args[0]))
+                message.reply_text("Unlocked 😏 Iny aarkkuvenelum {} ayakkaam. 😒 ".format(args[0]))
                 return "<b>{}:</b>" \
                        "\n#UNLOCK" \
                        "\n<b>Admin:</b> {}" \
@@ -173,7 +173,7 @@ def unlock(bot: Bot, update: Update, args: List[str]) -> str:
                 elif args[0] == "all":
                     unrestr_members(bot, chat.id, members, True, True, True, True)
                 """
-                message.reply_text("ഞാൻ {} അൺലോക്ക് ചെയ്തിട്ടുണ്ട്. ഇനി എല്ലാവർക്കും ഇവിടെ അയക്കാം..".format(args[0]))
+                message.reply_text("Unlocked 😏 Iny aarkkuvenelum {} ayakkaam. 😒 ".format(args[0]))
 
                 return "<b>{}:</b>" \
                        "\n#UNLOCK" \
@@ -181,10 +181,10 @@ def unlock(bot: Bot, update: Update, args: List[str]) -> str:
                        "\nUnlocked <code>{}</code>.".format(html.escape(chat.title),
                                                             mention_html(user.id, user.first_name), args[0])
             else:
-                message.reply_text("What are you trying to unlock...? Try /locktypes for the list of lockables")
+                message.reply_text("Enthaada unlock cheyyendath?  /locktypes nokkittu para ")
 
         else:
-            bot.sendMessage(chat.id, "What are you trying to unlock...?")
+            bot.sendMessage(chat.id, "Enthaada unlock cheyyendath vegam para. 😕")
 
     return ""
 
@@ -289,18 +289,17 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- - /locktypes: സാധ്യമായ ലോക്ക് ടൈപ്പുകളുടെ ഒരു പട്ടിക..
+ - /locktypes: a list of possible locktypes..
 
-*അഡ്‌മിൻ മാത്രം:*
- - /lock <type>: ഒരു പ്രത്യേക തരത്തിലുള്ള ലോക്ക് ഇനങ്ങൾ (സ്വകാര്യമായി ലഭ്യമല്ല)..
- - /unlock <type>: ഒരു പ്രത്യേക തരം ഇനങ്ങൾ അൺലോക്കുചെയ്യുക (സ്വകാര്യമായി ലഭ്യമല്ല) ..
- - /locks: ഈ ചാറ്റിലെ ലോക്കുകളുടെ നിലവിലെ പട്ടിക.
-
-ഒരു ഗ്രൂപ്പിന്റെ ഉപയോക്താക്കളെ നിയന്ത്രിക്കാൻ ലോക്കുകൾ ഉപയോഗിക്കാം. 
-ഉദാ:
-യു‌ആർ‌എൽ‌ ലോക്കുചെയ്യുന്നത് വൈറ്റ്‌ലിസ്റ്റ് ചെയ്യാത്ത url കളുള്ള എല്ലാ സന്ദേശങ്ങളും യാന്ത്രികമായി ഇല്ലാതാക്കും, 
-ലോക്കുചെയ്യുന്ന സ്റ്റിക്കറുകൾ‌ എല്ലാ സ്റ്റിക്കറുകളും ഇല്ലാതാക്കും. 
-ബോട്ടുകൾ ലോക്കുചെയ്യുന്നത് അഡ്മിൻ അല്ലാത്തവരെ ചാറ്റിലേക്ക് ബോട്ടുകൾ ചേർക്കുന്നതിൽ നിന്ന് തടയും.
+*Only For Admins:*
+ - - /lock <type>: lock items of a certain type (not available in private)
+ - /unlock <type>: unlock items of a certain type (not available in private)
+ - /locks: the current list of locks in this chat.
+Locks can be used to restrict a group's users.
+eg:
+Locking urls will auto-delete all messages with urls, locking stickers will delete all \
+stickers, etc.
+Locking bots will stop non-admins from adding bots to the chat.
 """
 
 __mod_name__ = "Locks"
